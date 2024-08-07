@@ -4,5 +4,11 @@
   "workspaces": [
     "packages/*",
     "services/*"
-  ]
+  ],
+  "scripts": {
+    "concurrent": "concurrently \"npm run start -w host\" \"npm run start -w admin\" \"npm run start -w shop\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
